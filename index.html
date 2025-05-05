@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerenciador de Recebimentos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Gerenciador de Recebimentos</h1>
+
+    <form id="recebimento-form">
+      <input type="text" id="cliente" placeholder="Nome do Cliente" required />
+      <input type="number" id="valor" placeholder="Valor (R$)" required step="0.01" />
+      <input type="date" id="data" required />
+      <select id="forma">
+        <option value="Dinheiro">Dinheiro</option>
+        <option value="Cartão">Cartão</option>
+        <option value="Pix">Pix</option>
+      </select>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Valor (R$)</th>
+          <th>Data</th>
+          <th>Forma</th>
+          <th>Valor Final</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-recebimentos">
+        <!-- Registros serão inseridos aqui -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
